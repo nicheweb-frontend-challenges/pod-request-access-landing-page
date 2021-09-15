@@ -1,13 +1,18 @@
 /* ||general styles */
 html {
+  max-width: 1440px;
   background: url("assets/mobile/image-host.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 body {
+  box-sizing: border-box;
   background: rgb(18, 23, 37, 0.9);
+  min-height: 100%;
+  max-width: calc(635px + 10vw);
 }
 input {
   padding: 0;
@@ -44,6 +49,7 @@ input {
   font-weight: Bold;
   font-size: 1.4rem;
   line-height: 2.8rem;
+  position: relative;
 }
 
 /* ||sidewide */
@@ -52,19 +58,20 @@ body {
   margin: 0;
 }
 main {
-  margin: 57px 0 33px;
-}
-footer {
-  margin-top: 33px;
+  margin-top: 57px;
 }
 .headline {
-  margin: 57px 0 0;
+  margin-bottom: 33px;
+}
+.headline h1 {
+  margin: 0 auto;
 }
 .headline p {
   margin: 16px auto 0;
 }
 .brands {
   padding: 0 5px;
+  margin: 33px auto 0;
 }
 
 /* ||utilities */
@@ -74,13 +81,15 @@ footer {
   height: 46px;
 }
 
-/* ||footer */
+/* ||Main */
+
 /* ||Brands */
 .brands {
   display: flex;
   align-items: center;
   justify-content: space-between;
   opacity: 0.5;
+  max-width: 535.96px;
 }
 .brands .brand-wrapper {
   flex: 1;
@@ -104,20 +113,163 @@ footer {
 }
 
 /* ||Call to action */
+.call-to-action {
+  position: relative;
+}
+.call-to-action p {
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  color: red;
+  margin: 0;
+}
 .call-to-action input {
   margin: 48px 0 16px;
-  padding-left: 9.7%;
+  padding-left: 32px;
   background: #2c344b;
+  max-width: 427px;
 }
 .call-to-action button {
+  border: 0;
+  padding: 0;
   background: #54e6af;
   margin: 0;
   font-size: 1.4rem;
   line-height: 2.8rem;
   color: #121725;
   font-weight: Bold;
+  max-width: 427px;
+}
+.call-to-action button:hover {
+  background: #b3ffe2;
 }
 .call-to-action input::placeholder {
   color: #ffff;
   opacity: 0.5;
+}
+
+@media screen and (min-width: 705px) {
+  html {
+    height: auto;
+    position: relative;
+    background-color: #121725;
+    background-image: url("assets/tablet/image-host.jpg");
+    background-position: top right;
+    background-size: auto;
+  }
+  body {
+    padding: 0;
+    text-align: left;
+    margin: 258px 12.2% 258px 5%;
+    background: rgb(18, 23, 37);
+  }
+  main {
+    margin-top: 0;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 258px;
+    width: 100%;
+    background-color: #121725;
+    background-image: url("assets/desktop/bg-pattern-dots.svg");
+    background-repeat: no-repeat;
+    background-position: left 30px bottom;
+    background-size: 232px auto;
+  }
+  .logo {
+    position: absolute;
+    top: 50px;
+    left: 39px;
+  }
+  .headline {
+    padding-top: 93px;
+  }
+  .headline h1 {
+    margin: 0;
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    max-width: 100%;
+  }
+  .headline p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin: 31px 0 40px;
+    width: 70%;
+  }
+  .brands {
+    margin-left: 0;
+    margin-top: 48px;
+    padding: 0;
+    padding-right: 99px;
+    order: 2;
+  }
+  .call-to-action {
+    order: 1;
+  }
+  .call-to-action p {
+    left: 32px;
+    top: auto;
+    bottom: -30px;
+  }
+  .call-to-action input {
+    margin: 0;
+    height: 56px;
+    width: 427px;
+  }
+  .call-to-action button {
+    position: absolute;
+    width: 162px;
+    margin: 5px 5px;
+    left: calc(427px - 162px - 10px);
+  }
+
+  /* Switching form and brands */
+  .bottom-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .brands {
+    order: 2;
+  }
+  .call-to-action {
+    order: 1;
+  }
+}
+@media screen and (min-width: 1100px) {
+  html {
+    background-image: url("assets/desktop/image-host.jpg");
+    background-position: right bottom 130px;
+  }
+  body {
+    margin: 261px 38.3% 130px 11.5%;
+  }
+  .logo {
+    left: 11.5%;
+    top: 102px;
+  }
+  .headline h1 {
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+  }
+  .headline p {
+    margin-top: 24px;
+    width: 62%;
+  }
+  footer {
+    height: 130px;
+    background-image: none;
+  }
+  footer .background-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+    width: 232px;
+    height: 104px;
+    background-image: url("assets/desktop/bg-pattern-dots.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
