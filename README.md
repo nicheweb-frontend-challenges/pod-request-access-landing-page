@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/nicheweb-frontend-challenges/pod-request-access-landing-page)
-- Live Site URL: [Add live site URL here](https://suspicious-clarke-05f018.netlify.app/)
+- Solution URL: [solution URL here](https://github.com/nicheweb-frontend-challenges/pod-request-access-landing-page)
+- Live Site URL: [live site URL here](https://suspicious-clarke-05f018.netlify.app/)
 
 ## My process
 
